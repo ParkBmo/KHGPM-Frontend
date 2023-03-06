@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from "@/views/lecture/HomeView.vue"
+import HomeView from '../views/HomeView.vue'
 
 import BindTest from "@/views/lecture/bind/BindTest.vue"
 import ClickEventTest from "@/views/lecture/clickEvent/ClickEventTest.vue"
@@ -12,13 +12,12 @@ import AxiosTestPage from "@/views/lecture/axiosTest/AxiosTestPage.vue"
 import JpaBoardListPage from "@/views/lecture/board/JpaBoardListPage.vue"
 import JpaBoardRegisterPage from "@/views/lecture/board/JpaBoardRegisterPage.vue"
 
-
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: HomeView
   },
   {
@@ -37,7 +36,7 @@ const routes = [
     component: ComponentTest
   },
   {
-    path: '/Emit-test-board-game',
+    path: '/emit-test-board-game',
     name: 'EmitTestBoardGame',
     component: EmitTestBoardGame
   },
@@ -56,6 +55,9 @@ const routes = [
     name: 'JpaBoardRegisterPage',
     component: JpaBoardRegisterPage
   },
+
+  
+  
 ]
 
 const router = new VueRouter({
