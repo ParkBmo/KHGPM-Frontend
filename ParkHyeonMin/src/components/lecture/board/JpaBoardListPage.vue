@@ -34,7 +34,7 @@
 <script>
 
 export default {
-    name: "JpaBoardList",
+    name: "JpaBoardListPage",
     props: {
         boards: {
             type: Array

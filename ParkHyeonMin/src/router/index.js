@@ -9,8 +9,11 @@ import ComponentTest from "@/views/lecture/componentTest/ComponentTest.vue"
 import EmitTestBoardGame from "@/views/lecture/emitTest/EmitTestBoardGame.vue"
 
 import AxiosTestPage from "@/views/lecture/axiosTest/AxiosTestPage.vue"
+
 import JpaBoardListPage from "@/views/lecture/board/JpaBoardListPage.vue"
 import JpaBoardRegisterPage from "@/views/lecture/board/JpaBoardRegisterPage.vue"
+
+import PorductBoardList from "@/views/lecture/board/ProductBoardList.vue"
 
 Vue.use(VueRouter)
 
@@ -55,8 +58,11 @@ const routes = [
     name: 'JpaBoardRegisterPage',
     component: JpaBoardRegisterPage
   },
-
-  
+  {
+    path: '/product-board-list',
+    name: 'ProductBoardList',
+    component: PorductBoardList
+  },
   
 ]
 
