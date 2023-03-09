@@ -6,19 +6,22 @@
         <th align="center" width="100">No</th>
         <th align="center" width="640">제목</th>
         <th align="center" width="150">작성자</th>
-        <th align="center" width="240">등록일자</th>
+        <th align="center" width="300">등록일자</th>
       </tr>
       <tr v-if="!boards || (Array.isArray(boards) && boards.length === 0)">
         <td colspan="4">
             현재 등록된 게시물이 없습니다!
         </td>
       </tr>
-      <tr v-else v-for="board in boards" :key="board.boardNo">
+      <tr v-else v-for="board in boards" :key="board.boardId">
         <td align="center">
-          {{ board.boardNo }}
+          {{ board.boardId }}
         </td>
         <td align="left">
-          {{ board.title }}
+          <router-link :to="{ name: 'JpaBoardReadPage',
+                            params: { boardId: board.boardId.toString() }}">
+            {{ board.title }}
+          </router-link>
         </td>
         <td align="right">
           {{ board.writer }}
